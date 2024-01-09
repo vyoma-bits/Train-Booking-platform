@@ -1,0 +1,11 @@
+<h2>Your  Upcoming jouney</h2>
+<table>
+    {% for passenger in u %}
+        <tr>
+            <td>{{ passenger.0 }}</td>
+            <td><a href="{% url 'info' passenger.1  %}">Edit  Ticket id:{{passenger.1}}</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="custview"> Redirect to home page</a>
+
